@@ -69,9 +69,9 @@
   var lightbox = document.getElementById('lightbox');
   var lightboxImage = document.getElementById('lightboxImage');
   var lightboxClose = document.getElementById('lightboxClose');
-  var galleryImages = document.querySelectorAll('.gallery-item img');
+  var galleryCards = document.querySelectorAll('.gallery-item');
 
-  if (lightbox && lightboxImage && lightboxClose && galleryImages.length) {
+  if (lightbox && lightboxImage && lightboxClose && galleryCards.length) {
     function openLightbox(img) {
       lightboxImage.src = img.currentSrc || img.src;
       lightboxImage.alt = img.alt || 'Imagem ampliada';
@@ -88,16 +88,19 @@
       document.body.classList.remove('lightbox-open');
     }
 
-    galleryImages.forEach(function (img) {
-      img.setAttribute('tabindex', '0');
-      img.setAttribute('role', 'button');
-      img.setAttribute('aria-label', 'Abrir imagem em tela inteira');
+    galleryCards.forEach(function (card) {
+      var img = card.querySelector('img');
+      if (!img) return;
 
-      img.addEventListener('click', function () {
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-label', 'Abrir imagem em tela inteira');
+
+      card.addEventListener('click', function () {
         openLightbox(img);
       });
 
-      img.addEventListener('keydown', function (e) {
+      card.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           openLightbox(img);
