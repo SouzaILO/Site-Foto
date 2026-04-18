@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio extra de Iago Lucas Souza com mais projetos e ensaios fotográficos." />
+  <title>Portfólio Extra — Iago Lucas Souza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar" aria-label="Navegação principal">
+    <a href="index.html" class="navbar__logo">Iago Lucas<span>.</span>Souza</a>
+    <ul class="navbar__links" id="navLinks" role="list">
+      <li><a href="index.html">Portfólio</a></li>
+      <li><a href="index.html#about">Sobre</a></li>
+      <li><a href="index.html#services">Serviços</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
+    <button class="navbar__toggle" id="navToggle" aria-label="Alternar menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="contact-page" id="main" aria-label="Portfólio extra">
+    <section class="section" aria-labelledby="portfolio-extra-title">
+      <div class="section__header">
+        <h1 class="section-title" id="portfolio-extra-title">Mais <span class="accent">Fotos</span></h1>
+        <p class="section-subtitle">Página extra para adicionar novos trabalhos ao seu portfólio</p>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item" data-category="fashion">
+          <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?w=900&auto=format&fit=crop" alt="Editorial de moda em ambiente urbano" loading="lazy" />
+          <div class="gallery-item__overlay">
+            <h3>Editorial Urbano</h3>
+            <span>Moda</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="portrait">
+          <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=900&auto=format&fit=crop" alt="Retrato artístico em preto e branco" loading="lazy" />
+          <div class="gallery-item__overlay">
+            <h3>Retrato Clássico</h3>
+            <span>Retrato</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="authorial">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=900&auto=format&fit=crop" alt="Projeto autoral com luz dramática" loading="lazy" />
+          <div class="gallery-item__overlay">
+            <h3>Projeto Autoral II</h3>
+            <span>Projetos Autorais</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="authorial">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&auto=format&fit=crop" alt="Criação de projeto com direção criativa" loading="lazy" />
+          <div class="gallery-item__overlay">
+            <h3>Criação de Projeto II</h3>
+            <span>Criação de Projetos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-more">
+        <a href="index.html#portfolio" class="btn btn--outline">Voltar ao Portfólio Principal</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Visualizacao de imagem em tela inteira">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Fechar visualizacao">&times;</button>
+    <img class="lightbox__image" id="lightboxImage" src="" alt="" />
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
