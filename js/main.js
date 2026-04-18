@@ -93,15 +93,6 @@
       var img = card.querySelector('img');
       if (!img) return;
 
-      if (!card.querySelector('.gallery-item__expand')) {
-        var expandBtn = document.createElement('button');
-        expandBtn.type = 'button';
-        expandBtn.className = 'gallery-item__expand';
-        expandBtn.setAttribute('aria-label', 'Visualizar em tela inteira');
-        expandBtn.textContent = '⤢';
-        card.appendChild(expandBtn);
-      }
-
       card.setAttribute('tabindex', '0');
       card.setAttribute('role', 'button');
       card.setAttribute('aria-label', 'Abrir imagem em tela inteira');
