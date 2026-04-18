@@ -401,16 +401,6 @@ h1, h2, h3, h4 {
   transform: scale(1.04);
 }
 
-.gallery-item:hover .gallery-item__overlay {
-  background: rgba(0,0,0,0.6);
-}
-
-.gallery-item:hover .gallery-item__overlay h3,
-.gallery-item:hover .gallery-item__overlay span {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .portfolio-more {
   display: flex;
   justify-content: center;
