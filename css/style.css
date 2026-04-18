@@ -10,12 +10,12 @@
 }
 
 :root {
-  --color-bg: #0d0d0d;
-  --color-surface: #161616;
-  --color-accent: #c8a96e;
-  --color-text: #e8e8e8;
-  --color-muted: #888;
-  --color-border: #2a2a2a;
+  --color-bg: #000000;
+  --color-surface: #0a0a0a;
+  --color-accent: #ffffff;
+  --color-text: #f0f0f0;
+  --color-muted: #777;
+  --color-border: #222222;
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   --max-width: 1200px;
@@ -94,8 +94,8 @@ h1, h2, h3, h4 {
 }
 
 .navbar.scrolled {
-  background: rgba(13, 13, 13, 0.96);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.97);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.9);
 }
 
 .navbar__logo {
@@ -195,7 +195,7 @@ h1, h2, h3, h4 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(13,13,13,0.4) 0%, rgba(13,13,13,0.6) 60%, rgba(13,13,13,0.95) 100%),
+    linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.97) 100%),
     url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1600&auto=format&fit=crop') center/cover no-repeat;
 }
 
@@ -253,8 +253,8 @@ h1, h2, h3, h4 {
 }
 
 .btn--primary:hover {
-  background: #d4b87a;
-  border-color: #d4b87a;
+  background: #e0e0e0;
+  border-color: #e0e0e0;
 }
 
 .btn--outline {
@@ -367,7 +367,7 @@ h1, h2, h3, h4 {
 .gallery-item__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(13,13,13,0);
+  background: rgba(0,0,0,0);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -400,7 +400,7 @@ h1, h2, h3, h4 {
 }
 
 .gallery-item:hover .gallery-item__overlay {
-  background: rgba(13,13,13,0.55);
+  background: rgba(0,0,0,0.6);
 }
 
 .gallery-item:hover .gallery-item__overlay h3,
@@ -685,7 +685,7 @@ footer {
 
 .social-btn:hover {
   border-color: var(--color-accent);
-  background: rgba(200,169,110,0.08);
+  background: rgba(255,255,255,0.06);
 }
 
 /* Contact form */
@@ -825,7 +825,7 @@ textarea {
     top: var(--nav-height);
     left: 0;
     width: 100%;
-    background: rgba(13,13,13,0.98);
+    background: rgba(0,0,0,0.99);
     padding: 2rem;
     gap: 1.5rem;
     border-top: 1px solid var(--color-border);
