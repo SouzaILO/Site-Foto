@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alex Moura Photography — capturing authentic moments in portrait, landscape and event photography." />
+  <title>Alex Moura Photography</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================
+       Navigation
+       ============================ -->
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <a href="index.html" class="navbar__logo">Alex<span>.</span>Moura</a>
+    <ul class="navbar__links" id="navLinks" role="list">
+      <li><a href="index.html" class="active">Portfolio</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ============================
+       Hero
+       ============================ -->
+  <header class="hero" id="home">
+    <div class="hero__bg" role="img" aria-label="Camera and photography equipment background image"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Photography Portfolio</p>
+      <h1 class="hero__title">Capturing Life's<br /><em>True Moments</em></h1>
+      <p class="hero__tagline">Portrait · Landscape · Events · Fine Art</p>
+      <div class="hero__cta">
+        <a href="#portfolio" class="btn btn--primary">View Portfolio</a>
+        <a href="contact.html" class="btn btn--outline">Book a Session</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+      <span>Scroll</span>
+    </div>
+  </header>
+
+  <!-- ============================
+       Portfolio Gallery
+       ============================ -->
+  <section id="portfolio" aria-labelledby="portfolio-title">
+    <div class="section">
+      <div class="section__header">
+        <h2 class="section-title" id="portfolio-title">Selected <span class="accent">Works</span></h2>
+        <p class="section-subtitle">A curated selection from recent projects</p>
+      </div>
+
+      <div class="gallery-filter" role="group" aria-label="Filter gallery by category">
+        <button class="gallery-filter__btn active" data-filter="all">All</button>
+        <button class="gallery-filter__btn" data-filter="portrait">Portrait</button>
+        <button class="gallery-filter__btn" data-filter="landscape">Landscape</button>
+        <button class="gallery-filter__btn" data-filter="event">Event</button>
+        <button class="gallery-filter__btn" data-filter="fineart">Fine Art</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+
+        <div class="gallery-item" data-category="portrait">
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=700&auto=format&fit=crop" alt="Portrait of a woman with golden light" loading="lazy" />
+          <div class="gallery-item__overlay">
+            <h3>Golden Hour</h3>
+            <span>Portrait</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="landscape">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=700&auto=format&fit=crop" alt="Mountain landscape at sunset" loading="lazy" />
+          <div class="gallery-item__overlay">
+            <h3>Mountain Dusk</h3>
+            <span>Landscape</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="event">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=700&auto=format&fit=crop" alt="Wedding ceremony outdoor" loading="lazy" />
+          <div class="gallery-item__overlay">
+            <h3>Forever Begins</h3>
+            <span>Event · Wedding</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="fineart">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&auto=format&fit=crop" alt="Abstract fine art photography" loading="lazy" />
+          <div class="gallery-item__overlay">
+            <h3>Refraction</h3>
+            <span>Fine Art</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="portrait">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=700&auto=format&fit=crop" alt="Man portrait in natural light" loading="lazy" />
+          <div class="gallery-item__overlay">
+            <h3>Natural Light</h3>
+            <span>Portrait</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="landscape">
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=700&auto=format&fit=crop" alt="Misty forest at dawn" loading="lazy" />
+          <div class="gallery-item__overlay">
+            <h3>Morning Mist</h3>
+            <span>Landscape</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="event">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&auto=format&fit=crop" alt="Lively concert event" loading="lazy" />
+          <div class="gallery-item__overlay">
+            <h3>In the Crowd</h3>
+            <span>Event · Concert</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="fineart">
+          <img src="https://images.unsplash.com/photo-1617791160536-598cf32026fb?w=700&auto=format&fit=crop" alt="Minimalist fine art composition" loading="lazy" />
+          <div class="gallery-item__overlay">
+            <h3>Stillness</h3>
+            <span>Fine Art</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="portrait">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=700&auto=format&fit=crop" alt="Close-up portrait of a smiling woman" loading="lazy" />
+          <div class="gallery-item__overlay">
+            <h3>Radiance</h3>
+            <span>Portrait</span>
+          </div>
+        </div>
+
+      </div><!-- /.gallery-grid -->
+    </div><!-- /.section -->
+  </section>
+
+  <!-- ============================
+       About Section
+       ============================ -->
+  <section id="about" class="about" aria-labelledby="about-title">
+    <div class="about__inner">
+
+      <div class="about__image-wrap">
+        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&auto=format&fit=crop" alt="Photographer Alex Moura at work" loading="lazy" />
+      </div>
+
+      <div class="about__text">
+        <p class="section-subtitle">Behind the lens</p>
+        <h2 class="section-title" id="about-title">Hello, I'm <span class="accent">Alex Moura</span></h2>
+        <p>I'm a photographer based in São Paulo, Brazil, with over 10 years of experience capturing authentic moments and transforming ordinary scenes into extraordinary visual stories.</p>
+        <p>My work spans portraiture, travel landscapes, corporate events, and fine-art prints. Every frame I take is guided by light, emotion, and the belief that great photography reveals what words cannot.</p>
+        <p>Whether you're looking to document a once-in-a-lifetime event or create timeless personal portraits, I'd love to work with you.</p>
+
+        <div class="about__stats">
+          <div class="about__stat">
+            <strong>10+</strong>
+            <span>Years of Experience</span>
+          </div>
+          <div class="about__stat">
+            <strong>320+</strong>
+            <span>Happy Clients</span>
+          </div>
+          <div class="about__stat">
+            <strong>15k+</strong>
+            <span>Photos Delivered</span>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn btn--primary">Book a Session</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================
+       Services Section
+       ============================ -->
+  <section id="services" class="services" aria-labelledby="services-title">
+    <div class="services__inner">
+      <div class="section__header">
+        <h2 class="section-title" id="services-title">What I <span class="accent">Offer</span></h2>
+        <p class="section-subtitle">Tailored photography for every occasion</p>
+      </div>
+
+      <div class="services__grid">
+        <div class="service-card">
+          <div class="service-card__icon" aria-hidden="true">📸</div>
+          <h3>Portrait Sessions</h3>
+          <p>Individual, couple, and family portraits crafted in natural light or studio settings.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon" aria-hidden="true">💍</div>
+          <h3>Wedding &amp; Events</h3>
+          <p>Full-day coverage of your most important moments — candid, editorial, and timeless.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon" aria-hidden="true">🏔️</div>
+          <h3>Landscape &amp; Travel</h3>
+          <p>Fine-art landscape prints and destination photography commissioned worldwide.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon" aria-hidden="true">🏢</div>
+          <h3>Corporate &amp; Brand</h3>
+          <p>Headshots, product, and brand imagery that tells your business story professionally.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       Footer
+       ============================ -->
+  <footer>
+    <div class="footer__inner">
+      <p class="footer__logo">Alex<span>.</span>Moura</p>
+      <ul class="footer__links" role="list">
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer__copy">&copy; 2024 Alex Moura Photography. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
