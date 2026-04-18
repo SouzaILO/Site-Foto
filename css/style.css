@@ -361,6 +361,7 @@ h1, h2, h3, h4 {
   width: 100%;
   height: auto;
   display: block;
+  cursor: zoom-in;
   transition: transform 0.5s ease;
 }
 
@@ -407,6 +408,60 @@ h1, h2, h3, h4 {
 .gallery-item:hover .gallery-item__overlay span {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Fullscreen lightbox */
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__image {
+  max-width: min(92vw, 1400px);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.lightbox__close:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 /* ===================================================
@@ -853,5 +908,14 @@ textarea {
 
   .contact-form-wrap {
     padding: 2rem 1.5rem;
+  }
+
+  .lightbox {
+    padding: 1rem;
+  }
+
+  .lightbox__close {
+    top: 0.6rem;
+    right: 0.6rem;
   }
 }
