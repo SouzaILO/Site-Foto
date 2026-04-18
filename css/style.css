@@ -344,14 +344,14 @@ h1, h2, h3, h4 {
 
 /* Masonry grid */
 .gallery-grid {
-  columns: 3;
+  columns: 2;
   column-gap: 1rem;
 }
 
 .gallery-item {
   break-inside: avoid;
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   overflow: hidden;
   border-radius: 2px;
   cursor: pointer;
@@ -374,7 +374,35 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
+  pointer-events: none;
   transition: background 0.4s ease;
+}
+
+.gallery-item__expand {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  pointer-events: auto;
+  cursor: zoom-in;
+  opacity: 0.92;
+  transition: border-color var(--transition), background var(--transition), opacity var(--transition);
+}
+
+.gallery-item__expand:hover {
+  border-color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
 }
 
 .gallery-item__overlay h3 {

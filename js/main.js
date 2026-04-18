@@ -69,9 +69,10 @@
   var lightbox = document.getElementById('lightbox');
   var lightboxImage = document.getElementById('lightboxImage');
   var lightboxClose = document.getElementById('lightboxClose');
+  var galleryGrid = document.getElementById('galleryGrid');
   var galleryCards = document.querySelectorAll('.gallery-item');
 
-  if (lightbox && lightboxImage && lightboxClose && galleryCards.length) {
+  if (lightbox && lightboxImage && lightboxClose && galleryGrid && galleryCards.length) {
     function openLightbox(img) {
       lightboxImage.src = img.currentSrc || img.src;
       lightboxImage.alt = img.alt || 'Imagem ampliada';
@@ -92,13 +93,18 @@
       var img = card.querySelector('img');
       if (!img) return;
 
+      if (!card.querySelector('.gallery-item__expand')) {
+        var expandBtn = document.createElement('button');
+        expandBtn.type = 'button';
+        expandBtn.className = 'gallery-item__expand';
+        expandBtn.setAttribute('aria-label', 'Visualizar em tela inteira');
+        expandBtn.textContent = '⤢';
+        card.appendChild(expandBtn);
+      }
+
       card.setAttribute('tabindex', '0');
       card.setAttribute('role', 'button');
       card.setAttribute('aria-label', 'Abrir imagem em tela inteira');
-
-      card.addEventListener('click', function () {
-        openLightbox(img);
-      });
 
       card.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -106,6 +112,16 @@
           openLightbox(img);
         }
       });
+    });
+
+    galleryGrid.addEventListener('click', function (e) {
+      var card = e.target.closest('.gallery-item');
+      if (!card || !galleryGrid.contains(card)) return;
+
+      var img = card.querySelector('img');
+      if (!img) return;
+
+      openLightbox(img);
     });
 
     lightboxClose.addEventListener('click', closeLightbox);
